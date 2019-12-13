@@ -24,8 +24,8 @@
 			
 			
 			<td style="border-top:1px solid #888;">
-			<input type="submit" name="login" value="Login"/><br>
-			Haven't registered yet?<a href="Pages/Registration.php">Register</a>
+			<input type="submit" name="login" value="Login"/><a href="Pages/forgetpass.html">Forget Password!</a><br>
+			Haven't registered yet?<a href="Pages/Registration.html">Register</a>
 			</td>
 			</tr>
 			
