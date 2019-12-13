@@ -62,31 +62,34 @@ if(isset($_POST['signup'])){
 <html>
 <head>
 	<title></title>
+	<script type="text/javascript"  src="verify.js"></script>
 </head>
 <body>
 	<center>
-	<form method="POST" action="Registration.php">
+	<form method="POST"  name="f1"  action="">
 			
 			<legend><b>REGISTRATION<br><hr width="150"></b></legend>
 			<table cellpadding="5px">
 			<tr>
 				<td>
-			Username:<br><input type="text" name="uname" value="">
+			Username:<br><input type="text" name="uname" id="uname"  onkeyup="return uname();" value=""><span id="em1"></span>
+			<br>
+		
 			</td>
 			</tr>
 			<tr>
 				<td>
-			Email:<br><input type="email" name="email" value="">
+			Email:<br><input type="text" name="email" id="email" onkeyup="return femail();" value=""><span id="em2"></span>
 			</td>
 			</tr>
 			<tr>
 				<td>
-			Password <br><input type="password" name="pass" value="">
+			Password <br><input type="password" name="pass" id="pass" onkeyup="return fpass();" value=""><span id="em3"></span>
 			</td>
 			</tr>
 			<tr>
 				<td>
-			Confirm Password<br><input type="password" name="cpass" value="">
+			Confirm Password<br><input type="password" name="cpass" id="cpass" onkeyup="return fcpass();" value=""><span id="em4"></span>
 			</td>
 			</tr>
 			
@@ -94,17 +97,10 @@ if(isset($_POST['signup'])){
 			<td style="border-top:1px solid #888;">
 			<input type="submit" name="signup" value="Sign Up"/><br>
 
-			Already a menmber? <a href="signin.php">Sign In</a>
+			Already a menmber? <a href="../signin.php">Sign In</a>
 			</td>
-			</tr>
-			
+			</tr>			
 			</table>
-
-			
-
-
 	</form>
-
-
 </body>
 </html>
