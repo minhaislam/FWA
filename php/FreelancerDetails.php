@@ -4,24 +4,24 @@ if(isset($_COOKIE['uname'])){
 ?>
 
 
-?>
+
 
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Work Hostory</title>
+	<title>Freelancer Details</title>
 </head>
 <body>
-	<legend>Freelancers work Hostory</legend>
+	<legend>List of All freelancer with details</legend>
 <table border="1">
 	<thead>
 		<tr>
-			<td>Job Details</td>
-			<td>Duration</td>
-			<td>Amount</td>
-			<td>Client review</td>
-			
+			<td>Name</td>
+			<td>Catagory</td>
+			<td>Completed Job</td>
+			<td>Average Response Time</td>
+			<td>Overall Review</td>
 
 		</tr>
 
@@ -29,10 +29,10 @@ if(isset($_COOKIE['uname'])){
 	<tbody>
 		<?php
          
-	$read = fopen('../txt/history.txt', 'r');
+	$read = fopen('../txt/freelancer.txt', 'r');
 	$fetch='';
-	if (filesize('../txt/history.txt')>0) {
-		$fetch = fread($read, filesize('../txt/history.txt'));
+	if (filesize('../txt/freelancer.txt')>0) {
+		$fetch = fread($read, filesize('../txt/freelancer.txt'));
 	}
 	
 	//$fetch = fread($read, filesize('data.txt'));
@@ -52,7 +52,7 @@ if(isset($_COOKIE['uname'])){
 			<td><?php echo $user[1];?></td>
 			<td><?php echo $user[2];?></td>
 			<td><?php echo $user[3];?></td>
-			
+			<td><?php echo $user[4];?></td>
 		</tr>
 <?php
 }
@@ -60,10 +60,9 @@ if(isset($_COOKIE['uname'])){
 ?>
 	</tbody>
 
-
 </table>
+<br>
 
-<a href="FreelancerDetails.php">Back</a><br>
 <a href="AdminHome.php">Home</a>
 </body>
 </html>
